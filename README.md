@@ -11,20 +11,4 @@
 #### Wemos D1 R32 Pinout
 ![wemos-d1-r32-wifi-bluetooth-uno-esp32-432307](https://user-images.githubusercontent.com/91959410/181250512-25018773-5e45-4b36-af2f-0615a91dadf8.jpg)
 
-#### Sensor TDS
 
-
-    void TDSnTemp() 
-    {  
-
-    sensors.requestTemperatures();
-    float temp = sensors.getTempCByIndex(0);
-    Serial.print("Temperature is: "); 
-    Serial.println(temp);
-    gravityTds.setTemperature(temp); 
-    gravityTds.update();  
-    tdsValue = gravityTds.getTdsValue();  
-    Serial.print(tdsValue,0);
-    Serial.println("ppm");
-    Blynk.virtualWrite(V0, temp);
-    Blynk.virtualWrite(V1, tdsValue);
