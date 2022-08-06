@@ -5,7 +5,7 @@
 ![image](https://user-images.githubusercontent.com/91959410/181244019-8e55b793-d27c-487a-b214-bf2febac265d.png)
 
 ## Skematik
-![image](https://user-images.githubusercontent.com/91959410/181244183-1f53ff97-ad2f-4214-9c49-b07e70d7d201.png)
+![Skematik v2](https://user-images.githubusercontent.com/91959410/183258080-fa16d0d4-37d5-483f-a5e8-09a4986724f1.png)
 
 ## Dokumentasi
 ### Wemos D1 R32
