@@ -105,13 +105,14 @@ void loop()
    if(temp >28){
     Blynk.virtualWrite(V5, HIGH);
     Blynk.virtualWrite(V6, LOW);
-    Blynk.notify("Suhu Kolam melebihi 28 Derajat Celcius!!");
+    Blynk.logEvent("suhu_hangat", "Suhu Kolam Koi Anda diatas 28 Derajat Celcius!!");
    }
 
    if(switchBawah == 0 && switchAtas == 0){
     digitalWrite(relaypin, LOW);
     Blynk.virtualWrite(V7, LOW);
     Blynk.virtualWrite(V8, HIGH);
+    Blynk.logEvent("mengisi_air", "Kolam Anda Sedang Mengisi Air!!");
    }
    if(switchBawah == 1 && switchAtas == 1){
     digitalWrite(relaypin, HIGH);
@@ -140,10 +141,10 @@ void loop()
        digitalWrite(ledhijau, LOW);
        digitalWrite(ledbiru, LOW);
        digitalWrite(ledmerah, HIGH);
-       Blynk.virtualWrite(V8, LOW);
-       Blynk.virtualWrite(V8, LOW);
-       Blynk.virtualWrite(V8, HIGH);
-       Blynk.notify("Tingkat TDS air kolam koi sudah tinggi!!");
+       Blynk.virtualWrite(V2, LOW);
+       Blynk.virtualWrite(V3, LOW);
+       Blynk.virtualWrite(V4, HIGH);
+       Blynk.logEvent("air_kotor", "Kualitas Air Kolam Koi Anda Buruk!!");
     }
     
 
